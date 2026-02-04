@@ -1,0 +1,138 @@
+:root {
+  color-scheme: light;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f6f3ee;
+  color: #1c1b1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 16px;
+  font-size: 16px;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+canvas {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #1c1b1a;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.status p {
+  margin: 0;
+  flex: 1 1 220px;
+}
+
+button {
+  border: 1px solid #1c1b1a;
+  background: #fdfaf5;
+  color: #1c1b1a;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: #1c1b1a;
+  color: #fdfaf5;
+}
+
+button.secondary {
+  background: transparent;
+}
+
+.controls {
+  display: grid;
+  gap: 8px;
+  justify-content: center;
+}
+
+.control-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.control-row button {
+  width: 56px;
+  height: 44px;
+  font-size: 18px;
+}
+
+.instructions {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #ded8cf;
+}
+
+.instructions h2 {
+  margin-top: 0;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+@media (min-width: 640px) {
+  .game {
+    grid-template-columns: minmax(320px, 420px) 1fr;
+  }
+
+  .status {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
